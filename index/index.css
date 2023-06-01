@@ -1,0 +1,629 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(#f2f2f2, #cccc);
+}
+
+/* 第一行整体 */
+#nav {
+    width: 100%;
+    height: 100px;
+    background-color: #CCCCCC;
+}
+
+#nav img {
+    height: 100px;
+}
+
+#logo {
+    position: absolute;
+    left: 10%;
+}
+
+/* 搜索框 */
+.search-box {
+    position: absolute;
+    top: 50px;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px;
+}
+
+.search-btn {
+    color: red;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #e84118;
+    font-size: 20px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0;
+}
+
+.search-box:hover>.search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover>.search-btn {
+    background: #fff;
+}
+
+/* 登录 */
+#sign {
+    display: flex;
+    position: absolute;
+    left: 65%;
+}
+
+.sign-in a {
+    text-decoration: none;
+    line-height: 32px;
+    color: black;
+    font-size: small;
+}
+
+.sign-out a {
+    text-decoration: none;
+    line-height: 32px;
+    color: white;
+    font-size: small;
+}
+
+.sign-in {
+    height: 33px;
+    width: 65px;
+    margin-top: 40px;
+    margin-right: 15px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.sign-out {
+    height: 33px;
+    width: 65px;
+    margin-top: 40px;
+    margin-right: 15px;
+    background: #F17C67;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.sign-in:hover {
+    box-shadow: 5px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    content: "";
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+.sign-out:hover {
+    box-shadow: 5px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    content: "";
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+/* 用户 */
+.user {
+    position: relative;
+    color: white;
+    font-size: 60px;
+    left: 80%;
+    line-height: 100px;
+}
+
+/* index */
+#index {
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid #D7D6D8;
+    margin-bottom: 30px;
+}
+
+.img {
+    position: absolute;
+    left: 15%;
+}
+
+.btn {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background: #f1f1f1;
+    margin-top: 8px;
+    margin-left: 55px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #3498db;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.btn i {
+    line-height: 55px;
+    font-size: 30px;
+    transition: 0.2s linear;
+}
+
+.btn:hover i {
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.btn:hover::before {
+    animation: flash 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes flash {
+    0% {
+        left: -100%;
+        top: 90%;
+    }
+
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+
+    100% {
+        left: -10%;
+        top: -10%;
+    }
+}
+
+/* 内容 */
+h1 {
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: 400;
+}
+
+li {
+    float: left;
+}
+
+h4 a,
+h4 {
+    width: 260px;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+h4 a:hover {
+    color: green;
+}
+
+#master {
+    width: 85%;
+    margin: 10px auto;
+    height: 3000px;
+}
+
+
+.mod1 {
+    width: 100%;
+    height: 450px;
+}
+
+/* 模块1的导航 */
+.subnav1 {
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.subnav1 ul li {
+    position: relative;
+    width: 100px;
+    float: left;
+    left: 18%;
+    margin-left: 20px;
+}
+
+.subnav1 ul li a {
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.subnav1 ul li a:hover {
+    color: green;
+    font-size: 18px;
+}
+
+.subnav1 ul li :not(.nohover):focus {
+    background-color: green;
+    font-size: 16px;
+    color: white;
+}
+
+.mod1_3 {
+    width: 100%;
+    height: 300px;
+}
+
+.mod1_3_box {
+    width: 240px;
+    height: 300px;
+    margin-right: 18px;
+}
+.mod1_3_box h4 {
+    position: relative;
+    top: 240px;
+    font-size: 16px;
+}
+
+span {
+    position: relative;
+    top: 240px;
+    font-size: 14px;
+}
+
+.image {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+}
+
+.image .play i {
+    line-height: 45px;
+    color: rgb(155, 153, 148);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.image .play {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.4s;
+    z-index: 1;
+    font-size: 26px;
+    display: none;
+}
+
+.mod1_3 img {
+    width: 240px;
+    transition: 0.4s;
+}
+
+.image:hover .play {
+    display: block;
+    transform: scale(1.4);
+}
+
+.mod1_3_box .image :hover img {
+    transform: scale(1.4);
+}
+
+.mod1_3_other {
+    height: 20px;
+    line-height: 20px;
+    width: 260px;
+    color: grey;
+}
+
+.mod2 {
+    width: 100%;
+    height: 500px;
+}
+
+/* 模块2的导航 */
+.subnav2 {
+    height: 50px;
+    position: flex;
+    left: 33%;
+    top: 13px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.subnav2 ul {
+    padding-left: 350px;
+}
+
+.subnav2 ul li {
+    width: 60px;
+    float: left;
+    margin-left: 40px;
+}
+
+.subnav2 ul li a {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.subnav2 ul li a:hover {
+    color: green;
+}
+
+.mod2_3 {
+    height: 370px;
+}
+
+.mod2_3 ul li {
+    float: left;
+}
+
+.mod2_3 ul li div {
+    float: left;
+}
+
+.mod2_3_txt_overflow {
+    width: 180px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.mod2_3_txt {
+    width: 265px;
+    height: 60px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.mod2_3_txt a {
+    text-decoration: none;
+    color: black;
+}
+
+.mod2_3_txt h3 {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.mod2_3_txt p {
+    font-size: 14px;
+}
+
+.mod2_3_txt a:hover {
+    color: green;
+}
+.imgtwo {
+    width: 100px;
+    height: 100px;
+}
+
+.imgtwo img {
+    width: 100px;
+    height: 100px;
+}
+
+.mod2_3_time {
+    width: 15px;
+    height: 40px;
+    margin-top: 30px;
+    line-height: 40px;
+}
+
+.mod2_3_box {
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.mod3 {
+    height: 300px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.mod3 div {
+    display: inline;
+    margin-right: 8.5px;
+}
+
+.mod3 img {
+    width: 630px;
+    margin-top: 40px;
+}
+
+.mod4 {
+    width: 100%;
+    height: 780px;
+}
+
+.mod4_3 ul li {
+    float: left;
+    margin-bottom: 25px;
+}
+
+.mod4_3_box {
+    width: 240px;
+    height: 320px;
+    margin-right: 16px;
+}
+
+.mod4_3 img {
+    width: 240px;
+    height: 240px;
+    transition: 0.4s;
+}
+
+.image:hover .play {
+    display: block;
+    transform: scale(1.4);
+}
+
+.mod4_3_box .image :hover img {
+    transform: scale(1.4);
+}
+
+.mod4_3 h4 {
+    width: 240px;
+    position: relative;
+    top: 240px;
+}
+
+.mod4_3_box h4,
+span {
+    position: relative;
+    top: 240px;
+    font-weight: 700;
+}
+
+.mod4_3_other {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.mod4_3_other a {
+    text-decoration: none;
+    color: grey;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.mod4_3_other a:hover {
+    color: green;
+}
+
+.mod5 {
+    width: 100%;
+    height: 800px;
+}
+
+.mod5 li {
+    clear: both;
+}
+
+.mod5 ul {
+    padding-left: 30px;
+    padding-top: 40px;
+    padding-bottom: 35px;
+}
+
+.d5_2 h3 {
+    padding-top: 60px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.d5_2 h2 {
+    font-weight: 400;
+}
+.d5_2 {
+    background: linear-gradient(#f2f2f2, #cccc);
+    height: 500px;
+    width: 230px;
+    text-align: center;
+    line-height: 28px;
+    margin-top: 50px;
+    float: left;
+    margin-right: 13px;
+    margin-left: 13px;
+}
+
+.d5_2 a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.d5_2 li :hover {
+    color: green;
+}
+
+/* 版权 */
+.over {
+    background: #333;
+    color: #fff;
+    height: 200px;
+    width: 100%;
+}
+
+.footer-content {
+    background: #333;
+    color: #fff;
+}
+
+.footer-info {
+    font-size: 14px;
+    line-height: 30px;
+    position: absolute;
+    left: 41%;
+    padding-top: 40px;
+}
+
+.footer-info p {
+    margin-left: 40px;
+}
+
+.footer-info nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-info nav a:hover {
+    text-decoration: underline;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 40px;
+    position: relative;
+    left: 40%;
+    letter-spacing: 50px;
+    top: 110px;
+}

@@ -1,0 +1,790 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(#f2f2f2, #cccc);
+}
+
+/* 第一行整体 */
+#nav {
+    width: 100%;
+    height: 100px;
+    background-color: #CCCCCC;
+}
+
+#nav img {
+    height: 100px;
+}
+
+#logo {
+    position: absolute;
+    left: 10%;
+}
+
+/* 搜索框 */
+.search-box {
+    position: absolute;
+    top: 50px;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px;
+}
+
+.search-btn {
+    color: red;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: #e84118;
+    font-size: 20px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0;
+}
+
+.search-box:hover>.search-txt {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.search-box:hover>.search-btn {
+    background: #fff;
+}
+
+/* 登录 */
+#sign {
+    display: flex;
+    position: absolute;
+    left: 65%;
+}
+
+.sign-in a {
+    text-decoration: none;
+    line-height: 32px;
+    color: black;
+    font-size: small;
+}
+
+.sign-out a {
+    text-decoration: none;
+    line-height: 32px;
+    color: white;
+    font-size: small;
+}
+
+.sign-in {
+    height: 33px;
+    width: 65px;
+    margin-top: 40px;
+    margin-right: 15px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.sign-out {
+    height: 33px;
+    width: 65px;
+    margin-top: 40px;
+    margin-right: 15px;
+    background: #F17C67;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.sign-in:hover {
+    box-shadow: 5px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    content: "";
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+.sign-out:hover {
+    box-shadow: 5px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    content: "";
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+/* 用户 */
+.user {
+    position: absolute;
+    color: white;
+    font-size: 60px;
+    left: 80%;
+    line-height: 100px;
+}
+
+/* index */
+#index {
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    border-bottom: 1px solid #D7D6D8;
+}
+
+.img {
+    position: absolute;
+    left: 15%;
+}
+
+.btn {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background: #f1f1f1;
+    margin-top: 8px;
+    margin-left: 55px;
+    border-radius: 30%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    color: #3498db;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.btn i {
+    line-height: 55px;
+    font-size: 30px;
+    transition: 0.2s linear;
+}
+
+.btn:hover i {
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: #3498db;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.btn:hover::before {
+    animation: flash 0.7s 1;
+    top: -10%;
+    left: -10%;
+}
+
+@keyframes flash {
+    0% {
+        left: -100%;
+        top: 90%;
+    }
+
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+
+    100% {
+        left: -10%;
+        top: -10%;
+    }
+}
+/* 内容 */
+.main{
+    width: 90%;
+    margin: auto;
+}
+/* 左边排行榜调整 */
+.name_a {
+    float: left;
+    width: 178px;
+    border: 1px solid hsla(0, 0%, 60%, .2)
+}
+
+.name_a_a {
+    margin-bottom: 20px
+}
+
+.name_a_b {
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: 400;
+    border-bottom: 1px solid #ebebeb;
+    margin: 0 17px 10px
+}
+
+.name_a_c {
+    font-size: 15px;
+    display: block;
+    line-height: 22px;
+    padding: 8px 17px
+}
+
+.name_a_c--current,
+.name_a_c--current:hover {
+    color: #000000
+}
+
+/* 排行榜边框设置 */
+@media (max-width: 1240px) {
+    .name_a {
+        width: 150px
+    }
+
+    /* 大中小榜字体大小 */
+    .name_a_b {
+        font-size: 17px
+    }
+
+    .name_a_c {
+        font-size: 14px
+    }
+
+    .name1_name {
+        margin-left: 175px
+    }
+}
+
+/* 标题榜 日期 榜单规则的字体设置 */
+.name__hd {
+    line-height: 64px;
+    height: 64px;
+    margin-bottom: 10px
+}
+
+.name__tit {
+    float: left;
+    font-weight: 400;
+    font-size: 24px;
+    margin-right: 15px
+}
+
+.name__tips {
+    position: absolute;
+    top: 74px;
+    right: 0;
+    line-height: 40px
+}
+
+.name_switch {
+    margin-right: 15px;
+    font-size: 0
+}
+
+.name_switch__x {
+    font-size: 14px
+}
+
+.name_switch__q {
+    display: inline-block;
+    vertical-align: middle;
+    width: 17px;
+    height: 23px;
+    overflow: hidden
+}
+
+/* 所有字体图片的位置调整 */
+blockquote,
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+input,
+lengend,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0
+}
+
+body,
+button,
+input,
+select,
+textarea,
+th {
+    color: #000;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%
+}
+
+li {
+    list-style: none
+}
+
+img {
+    border: 0;
+    -ms-interpolation-name1e: bicubic;
+    image-rendering: optimizeQuality
+}
+
+/* 点击字体设置 */
+.main a {
+    color: #000;
+    cursor: pointer
+}
+
+.main a:hover {
+    background-color: #9d9d9d;
+}
+
+.main a:focus,
+button:focus,
+input:focus {
+    outline: none
+}
+
+/* 设置滑轮的长度及大小 */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px
+}
+
+::-webkit-scrollbar-track {
+    background: transparent
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #666
+}
+
+/* 设置播放全部 收藏 下载 操作 评论边框以及颜色 */
+.name1_btn,
+.name1_a_a,
+.name1_btn_yellow {
+    border-radius: 2px;
+    font-size: 14px;
+    margin-right: 6px;
+    padding: 0 23px;
+    height: 38px;
+    line-height: 38px;
+    display: inline-block;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden
+}
+
+.name1_btn {
+    border: 1px solid #c9c9c9;
+    color: #000
+}
+
+.name1_btn--hover,
+.name1_btn:hover {
+    background-color: #ededed;
+    color: #333
+}
+
+.name1_a_a {
+    border: 1px solid #c9c9c9;
+    background-color: #ededed;
+    color: #ffffff
+}
+
+/* 页面的位置调整 */
+@media (max-width: 1240px) {
+    body {
+        min-width: 1000px
+    }
+
+    .main,
+    .section_inner {
+        margin: 0 50px;
+        min-width: 900px
+    }
+}
+
+/* 121%及以下百分比的位置调整 */
+.HTML_rank_down,
+.HTML_rank_keep,
+.HTML_rank_new,
+.HTML_rank_r,
+.HTML_rank_re,
+.HTML_rank_up {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.HTML_rank_r {
+    width: 15px;
+    height: 15px;
+    margin-top: 27px;
+    background-position: 0 -60px
+}
+
+/* 歌曲,歌手,时长及下面内容的位置和大小 */
+.xq__list {
+    overflow: hidden;
+    clear: both
+}
+
+.xq__n,
+.xq__i {
+    position: relative;
+    padding-left: 46px;
+    padding-right: 95px
+}
+
+.xq__i {
+    clear: both;
+    font-size: 0;
+    overflow: hidden
+}
+
+.xq__i_e {
+    background-color: rgba(0, 0, 0, .01)
+}
+
+.xq__album,
+.xq__artist,
+.xq__number,
+.xq__other,
+.xq__time {
+    font-size: 14px
+}
+
+.xq__album,
+.xq__artist,
+.xq__number,
+.xq__other,
+.xq__songname,
+.xq__time {
+    line-height: 50px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.xq__n {
+    height: 50px;
+    line-height: 50px;
+    color: #949494
+}
+
+.xq__n_name,
+.xq__songname {
+    float: left;
+    width: 47.685185%;
+    position: relative;
+    white-space: normal
+}
+
+.xq__album,
+.xq__artist,
+.xq__n_album,
+.xq__n_a {
+    float: left;
+    padding-left: 15px;
+    width: 25.5%;
+    box-sizing: border-box
+}
+
+.xq__n_time,
+.xq__time {
+    position: absolute;
+    top: 0;
+    right: 38px;
+    width: 50px
+}
+
+.xq__n_other,
+.xq__other {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38px;
+    overflow: inherit
+}
+
+.xq__song_txt {
+    margin-left: 10px
+}
+
+.xq__song_txt,
+.xq__time {
+    color: #999
+}
+
+.xq__number {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: #999;
+    width: 36px
+}
+
+.xq__songname_txt {
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 56%;
+    margin-right: 8px;
+    white-space: nowrap;
+    font-size: 14px
+}
+
+.xq__i .xq__songname_txt:first-child {
+    max-width: 85%;
+    box-sizing: border-box
+}
+
+.xq__i .xq__HTML:first-child+.xq__songname_txt {
+    max-width: 72%;
+    box-sizing: border-box
+}
+
+.xq__i .xq__HTML:nth-child(2)+.xq__songname_txt {
+    max-width: 62%;
+    box-sizing: border-box
+}
+
+.xq__HTML {
+    display: inline-block
+}
+
+.xq__i--current .xq__delete:hover,
+.xq__i:hover .xq__delete:hover {
+    background-position: -120px -160px
+}
+
+/* <--头像位置 大小--> */
+.list_current,
+.list_hover {
+    background-color: #f7f7f7
+}
+
+.list_current .name1_a_text .a__title,
+.list_hover .name1_a_text .a__title {
+    width: 30.8986%
+}
+
+.name1_a_text .list_current .list_menu,
+.name1_a_text .list_hover .list_menu {
+    position: static;
+    float: left
+}
+
+.name1_a_text .a__time {
+    position: absolute;
+    right: 10px;
+    width: 133px;
+    top: 0;
+    color: #999
+}
+
+.name1_a_text .a__time span {
+    position: relative;
+    float: left;
+    font-size: 13px
+}
+
+.name_name1_xq {
+    margin-bottom: 60px;
+    font-size: 14px;
+    overflow: hidden
+}
+
+.name_name1_xq .xq__n,
+.name_name1_xq .xq__i {
+    padding-left: 122px
+}
+
+.name_name1_xq .xq__i {
+    height: 80px
+}
+
+.name_name1_xq .xq__i--first .xq__number {
+    width: 42px
+}
+
+.name_name1_xq .xq__album,
+.name_name1_xq .xq__artist,
+.name_name1_xq .xq__number,
+.name_name1_xq .xq__other,
+.name_name1_xq .xq__rank,
+.name_name1_xq .xq__songname,
+.name_name1_xq .xq__time {
+    line-height: 80px;
+    height: 80px
+}
+
+.name_name1_xq .xq__n_name,
+.name_name1_xq .xq__songname {
+    width: 72%
+}
+
+.name_name1_xq .xq__number {
+    width: 40px;
+    top: 2px;
+    left: 0;
+    text-align: right;
+    font-size: 24px;
+    color: #333
+}
+
+.name_name1_xq .xq__number--top {
+    color: #ff4222
+}
+
+.name_name1_xq .xq__rank {
+    position: absolute;
+    top: 0;
+    left: 48px;
+    width: 72px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #999
+}
+
+.name_name1_xq .xq__cover {
+    float: left;
+    margin-right: 20px;
+    margin-top: 5px
+}
+
+/* <--头像大小--> */
+.name_name1_xq .xq__cover,
+.name_name1_xq .xq__pic {
+    width: 70px;
+    height: 70px
+}
+
+@media (max-width: 1240px) and (min-width:1100px) {
+
+    .name_name1_xq .xq__cover,
+    .name_name1_xq .xq__pic {
+        width: 60px;
+        height: 60px
+    }
+
+    .name_name1_xq .xq__cover {
+        margin-right: 10px;
+        margin-top: 10px
+    }
+}
+
+/* <--查看更多 现在下载--> */
+.client_guide {
+    margin-bottom: 22px;
+    overflow: hidden
+}
+
+.client_guide__txt {
+    font-size: 18px;
+    color: #000;
+    text-align: center
+}
+
+.client_guide__btn {
+    display: block;
+    margin: 20px auto 0;
+    width: 175px;
+    height: 41px;
+    line-height: 41px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    border-radius: 41px;
+    background-color: white
+}
+
+.client_guide__btn:hover {
+    color: #fff;
+    background-color: #9d9d9d
+}
+/* 版权 */
+.over {
+    background: #333;
+    color: #fff;
+    height: 200px;
+    width: 100%;
+}
+
+.footer-content {
+    background: #333;
+    color: #fff;
+}
+
+.footer-info {
+    font-size: 14px;
+    line-height: 30px;
+    position: absolute;
+    left: 41%;
+    padding-top: 40px;
+}
+
+.footer-info p {
+    margin-left: 40px;
+}
+
+.footer-info nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-info nav a:hover {
+    text-decoration: underline;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 40px;
+    position: relative;
+    left: 40%;
+    letter-spacing: 50px;
+    top: 110px;
+}
